@@ -5,11 +5,11 @@ Serverless batch ETL pipeline using Cloud Run Functions. Fetches cryptocurrency 
 ## Architecture
 
 ```
-Cloud Scheduler (every hour)
-        │
-        ▼
+    Cloud Scheduler (every hour)
+                │
+                ▼
 ┌─────────────────────────────────────┐
-│  Cloud Function: crypto-pipeline     │
+│  Cloud Function: crypto-pipeline    │
 │  (HTTP-triggered, gen2)             │
 │                                     │
 │  1. Fetch from CoinGecko API        │
