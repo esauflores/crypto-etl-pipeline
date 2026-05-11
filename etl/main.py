@@ -29,7 +29,9 @@ def fetch():
 
 
 def transform(data):
+    now = datetime.now(timezone.utc).isoformat()
     return [{
+        "fetched_at": now,
         "id": c.get("id"),
         "symbol": c.get("symbol"),
         "name": c.get("name"),
